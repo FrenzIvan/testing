@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  font-family: "Karla", sans-serif;
+}
+:root {
+  --gray: rgb(245, 245, 245);
+  --red: rgb(240, 84, 84);
+  --blue: rgb(48, 71, 94);
+  --black: rgb(18, 18, 18);
+  --box-shadow: hsla(0, 0%, 0%, 0.2);
+  --radius: 50%;
+  --dark-text: rgb(18, 18, 18);
+  --light-text: rgb(245, 245, 245);
+  --dark-bg: rgb(48, 71, 94);
+  --red: rgb(240, 84, 84);
+}
+/* .card {
+  overflow: hidden;
+} */
+.card img {
+  transition: all 1.3s ease;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+/* @media only screen and (max-device-width: 1080px) {
+  .img {
+    transform: scale(1);
+  }
+} */
+body,
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("maindish.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+#nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 5;
+}
+
+#header-image {
+  height: 5vh;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  background: var(--light-text);
+  width: 100%;
+}
+.nav-container hr {
+  border-bottom: solid 1.5vh var(--dark-bg);
+}
+
+.nav-list {
+  /* opacity: 0.8; */
+  background: var(--light-text);
+  padding: 1vh 0;
+  /* border-radius: var(--radius); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 1.5vw;
+  font-family: "Inter", sans-serif;
+  font-size: 2vh;
+}
+.nav-item a {
+  text-decoration: none;
+  color: var(--red);
+  transition: all 200ms ease-in;
+}
+.nav-item a:hover {
+  color: var(--dark-bg);
+}
+.nav-item:first-child {
+  margin-right: 25vw;
+  margin-left: 2rem;
+}
+
+.menu-container .nav-list {
+  /* opacity: 0.8; */
+  box-shadow: 0px 0px 10px var(--box-shadow);
+  background: var(--light-text);
+  padding: 1rem 0;
+  /* border-radius: var(--radius); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.menu-container .nav-item {
+  list-style: none;
+  margin-right: 1.5vw;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5vh;
+}
+.menu-container .nav-item a {
+  text-decoration: none;
+  color: var(--dark-bg);
+  transition: all 200ms ease-in;
+}
+.menu-container .nav-item a:hover {
+  color: var(--red);
+}
